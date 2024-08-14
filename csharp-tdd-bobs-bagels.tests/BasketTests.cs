@@ -2,13 +2,32 @@ namespace csharp_tdd_bobs_bagels.tests;
 
 public class BasketTests
 {
-    [SetUp]
-    public void Setup()
+    [Test]
+    public void AddedBagelToBasket()
     {
+        Assert.Pass();
+    }
+   
+    [Test]
+    public void RemovedBagelFromBasket()
+    {
+        Assert.Pass();
+    }   
+
+    [Test]
+    public void BasketIsFullWhenTryingToAddBagel()
+    {
+        Assert.Pass();
     }
 
     [Test]
-    public void Test1()
+    public void SetBasketCapacity()
+    {
+        Assert.Pass();
+    }
+
+    [Test]
+    public void RemoveBagelThatDoesntExist()
     {
         Assert.Pass();
     }
