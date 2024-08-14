@@ -11,10 +11,11 @@ public class BasketTests
         Basket basket = new Basket();
 
         // 2. Execute
-        basket.Add("Cream-cheese bagel");
+        string bagelName = "Crame-cheese bagel";
+        basket.Add(bagelName);
 
         // 3. Verify
-        Assert.IsTrue(basket.Bagels.Contains("Cream-cheese bagel"));
+        Assert.IsTrue(basket.Bagels.Contains(bagelName));
     }
    
     [Test]
