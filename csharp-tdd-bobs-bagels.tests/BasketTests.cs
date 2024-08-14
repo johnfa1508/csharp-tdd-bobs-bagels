@@ -14,7 +14,7 @@ public class BasketTests
         basket.Add("Cream-cheese bagel");
 
         // 3. Verify
-        Assert.IsTrue(basket.Bagels.Contains("Cream-cheese bagle"));
+        Assert.IsTrue(basket.Bagels.Contains("Cream-cheese bagel"));
     }
    
     [Test]
