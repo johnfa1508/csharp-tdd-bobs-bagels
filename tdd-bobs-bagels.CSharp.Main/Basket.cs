@@ -23,9 +23,15 @@ namespace tdd_bobs_bagels.CSharp.Main
             }  
         }
 
-        public void Remove(string bagelName)
+        public string Remove(string bagelName)
         {
-            _bagels.Remove(bagelName);
+            if (!_bagels.Contains(bagelName)) {
+                return $"{bagelName} does not exist.";
+            } else
+            {
+                _bagels.Remove(bagelName);
+                return $"{bagelName} successfully removed.";
+            }
         }
 
         public List<string> Bagels { get { return _bagels; } }
