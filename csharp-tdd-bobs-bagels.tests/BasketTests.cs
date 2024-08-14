@@ -1,34 +1,55 @@
-namespace csharp_tdd_bobs_bagels.tests;
+using tdd_bobs_bagels.CSharp.Main;
+using NUnit.Framework;
 
+namespace csharp_tdd_bobs_bagels.tests;
 public class BasketTests
 {
     [Test]
     public void AddedBagelToBasket()
     {
-        Assert.Pass();
+        // 1. Setup
+        Basket basket = new Basket();
+
+        // 2. Execute
+        basket.Add("Cream-cheese bagel");
+
+        // 3. Verify
+        Assert.IsTrue(basket.Bagels.Contains("Cream-cheese bagle"));
     }
    
     [Test]
     public void RemovedBagelFromBasket()
     {
-        Assert.Pass();
+        // 1. Setup
+        // 2. Execute
+        // 3. Verify
+        Assert.Fail();
     }   
 
     [Test]
     public void BasketIsFullWhenTryingToAddBagel()
     {
-        Assert.Pass();
+        // 1. Setup
+        // 2. Execute
+        // 3. Verify
+        Assert.Fail();
     }
 
     [Test]
     public void SetBasketCapacity()
     {
-        Assert.Pass();
+        // 1. Setup
+        // 2. Execute
+        // 3. Verify
+        Assert.Fail();
     }
 
     [Test]
     public void RemoveBagelThatDoesntExist()
     {
-        Assert.Pass();
+        // 1. Setup
+        // 2. Execute
+        // 3. Verify
+        Assert.Fail();
     }
 }
