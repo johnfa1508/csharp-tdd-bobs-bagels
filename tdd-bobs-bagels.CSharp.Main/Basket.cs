@@ -18,7 +18,7 @@ namespace tdd_bobs_bagels.CSharp.Main
 
         public void Remove(string bagelName)
         {
-            throw new NotImplementedException();
+            _bagels.Remove(bagelName);
         }
 
         public List<string> Bagels { get { return _bagels; } }
