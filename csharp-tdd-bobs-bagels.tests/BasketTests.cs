@@ -52,17 +52,28 @@ public class BasketTests
     public void SetBasketCapacity()
     {
         // 1. Setup
+        Basket basket = new Basket();
+
         // 2. Execute
+        int newBasketCapacity = 100; 
+        basket.BasketCapacity = newBasketCapacity;
+
         // 3. Verify
-        Assert.Fail();
+        Assert.IsTrue(basket.BasketCapacity == newBasketCapacity);
     }
 
     [Test]
     public void RemoveBagelThatDoesntExist()
     {
         // 1. Setup
+        Basket basket = new Basket();
+
         // 2. Execute
+        string bagelName = "Nutella bagel";
+        basket.Add(bagelName);
+        string result = basket.Remove(bagelName);
+
         // 3. Verify
-        Assert.Fail();
+        Assert.IsTrue(!basket.Bagels.Contains(bagelName) & result == $"{bagelName} does not exist.");
     }
 }
