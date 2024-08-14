@@ -37,9 +37,15 @@ public class BasketTests
     public void BasketIsFullWhenTryingToAddBagel()
     {
         // 1. Setup
+        Basket basket = new Basket();
+
         // 2. Execute
+        string bagelName = "Cheddar jalapeno bagel";
+        basket.BasketCapacity = 0;
+        string result = basket.Add(bagelName);
+        
         // 3. Verify
-        Assert.Fail();
+        Assert.IsTrue(!basket.Bagels.Contains(bagelName) & result == $"There is no space for {bagelName}");
     }
 
     [Test]
