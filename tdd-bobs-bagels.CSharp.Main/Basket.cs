@@ -19,22 +19,26 @@ namespace tdd_bobs_bagels.CSharp.Main
             } else
             {
                 _bagels.Add(bagelName);
+                BasketCapacity -= 1;
                 return $"Successfully added {bagelName}";
             }  
         }
 
         public string Remove(string bagelName)
         {
-            if (!_bagels.Contains(bagelName)) {
-                return $"{bagelName} does not exist.";
-            } else
+            if (_bagels.Contains(bagelName))
             {
                 _bagels.Remove(bagelName);
+                BasketCapacity += 1;
                 return $"{bagelName} successfully removed.";
+            }
+            else
+            {
+                return $"{bagelName} does not exist.";
             }
         }
 
-        public List<string> Bagels { get { return _bagels; } }
-        public int BasketCapacity { get { return BasketCapacity; } set { _basketCapacity = value; } }
+        public List<string> Bagels { get { return this._bagels; } }
+        public int BasketCapacity { get { return this._basketCapacity; } set { this._basketCapacity = value; } }
     }
 }

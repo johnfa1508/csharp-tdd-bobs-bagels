@@ -71,6 +71,7 @@ public class BasketTests
         // 2. Execute
         string bagelName = "Nutella bagel";
         basket.Add(bagelName);
+        basket.Remove(bagelName);
         string result = basket.Remove(bagelName);
 
         // 3. Verify
