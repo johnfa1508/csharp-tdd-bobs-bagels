@@ -16,6 +16,11 @@ namespace tdd_bobs_bagels.CSharp.Main
             _bagels.Add(bagelName);
         }
 
+        public void Remove(string bagelName)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<string> Bagels { get { return _bagels; } }
         public int BasketCapacity { get { throw new NotImplementedException(); } set { _basketCapacity = value; } }
     }

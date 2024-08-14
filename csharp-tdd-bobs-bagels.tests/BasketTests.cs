@@ -11,7 +11,7 @@ public class BasketTests
         Basket basket = new Basket();
 
         // 2. Execute
-        string bagelName = "Crame-cheese bagel";
+        string bagelName = "Cream-cheese bagel";
         basket.Add(bagelName);
 
         // 3. Verify
@@ -22,9 +22,15 @@ public class BasketTests
     public void RemovedBagelFromBasket()
     {
         // 1. Setup
+        Basket basket = new Basket();
+
         // 2. Execute
+        string bagelName = "Avocado smoked salmon bagel";
+        basket.Add(bagelName);
+        basket.Remove(bagelName);
+
         // 3. Verify
-        Assert.Fail();
+        Assert.IsTrue(!basket.Bagels.Contains(bagelName));
     }   
 
     [Test]
